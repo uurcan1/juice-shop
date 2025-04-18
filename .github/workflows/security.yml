@@ -5,3 +5,13 @@
 - name: Generate SBOM with Syft
   run: |
     syft . -o table
+
+- name: Set up Python
+  uses: actions/setup-python@v4
+
+- name: Install Semgrep
+  run: pip install semgrep
+
+- name: Run Semgrep
+  run: semgrep --config=auto .
+
