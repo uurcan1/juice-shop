@@ -2,7 +2,7 @@ name: Security Checks
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main , master , yml ]
   pull_request:
     branches: [ main ]
 
