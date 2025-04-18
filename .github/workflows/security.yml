@@ -1,0 +1,7 @@
+- name: Install Syft
+  run: |
+    curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+
+- name: Generate SBOM with Syft
+  run: |
+    syft . -o table
